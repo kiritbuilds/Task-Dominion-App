@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.kdo-app {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.kdo-header {
+    background: #bb2222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.kdo-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    /*dhundhla (semi-transparent) */
+}
+
+.kdo-input-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.kdo-input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.kdo-input:focus {
+    border-color: #333;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #26be15;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fafafa;
+}
+
+
+.filter-btn {
+    padding: 6px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.filter-btn:hover {
+    background: #26c6e2;
+}
+
+.kdo-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.kdo-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.kdo-item:hover {
+    background-color: #5def0f;
+}
+
+.kdo-item.completed {
+    opacity: 0.6;
+}
+
+.kdo-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.kdo-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.delete-btn {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    color: #1086da;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.kdo-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+
+.kdo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f0db3d;
+    border-top: 1px solid #eee;
+}
+
+.kdo-footer:hover {
+    background: #26c6e2
+}
+
+.items-left {
+    color: #db2323;
+    font-size: 14px;
+}
+
+
+.clear-completed {
+    padding: 6px 12px;
+    background: darkturquoise;
+    color: #db1d1d;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.clear-completed:hover {
+    background: #bde83e;
+}
+
+
+/* Scrollbar styling */
+.kdo-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kdo-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.kdo-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.kdo-list::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .kdo-header h1 {
+        font-size: 2rem;
+    }
+
+    .kdo-input-container {
+        flex-direction: column;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filter-container {
+        flex-wrap: wrap;
+    }
+
+    .kdo-item {
+        padding: 15px 20px;
+    }
+}
